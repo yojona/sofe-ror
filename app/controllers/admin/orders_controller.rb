@@ -7,7 +7,7 @@ class Admin::OrdersController < Admin::BaseController
   end
 
   def destroy
-    flash[:danger] = "Order ##{@order.id} deleted."
+    flash[:danger] = "Order #{@order.id} was deleted."
     @order.destroy
     redirect_to admin_orders_path
   end
